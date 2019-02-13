@@ -18,6 +18,8 @@ from utils import get_filenames, natural_key, atoi
 from scipy import ndimage
 from matplotlib import pyplot as plt
 import cv2
+from keras import backend as K
+K.tensorflow_backend._get_available_gpus()
 
 class Segmentation():
     def __init__(self, batch_size, epochs, data_path, image_train_dir, mask_train_dir, image_eval_dir, mask_eval_dir,
